@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-card-container {
+  @apply relative m-auto;
+}
+
+.profile-card-bg {
+  @apply absolute transition duration-700 rounded-xl opacity-75 -inset-1 blur custom-gradient;
+}
+
+.profile-card {
+  @apply relative items-center bg-black rounded-xl px-7 py-7;
+}
+
+.profile-card-content-container {
+  @apply items-center transition duration-700 opacity-75;
+}
+
+.profile-card-content {
+  @apply text-gray-400;
+}
+
+.custom-gradient {
+  @apply bg-gradient-to-tr from-cyan-500 to-fuchsia-500;
+}
