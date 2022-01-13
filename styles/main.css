@@ -2,26 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.profile-card-container {
-  @apply relative m-auto;
+body {
+    cursor: none;
 }
 
-.profile-card-bg {
-  @apply absolute transition duration-700 rounded-xl opacity-75 -inset-1 blur custom-gradient;
+a {
+    cursor: none;
 }
 
-.profile-card {
-  @apply relative items-center bg-black rounded-xl px-7 py-7;
+.cursor {
+  @apply absolute w-12 h-12 border-2 border-white rounded-full -translate-y-1/2 -translate-x-1/2;
+  z-index: -1;
 }
 
-.profile-card-content-container {
-  @apply items-center transition duration-700 opacity-75;
-}
-
-.profile-card-content {
-  @apply text-gray-400;
-}
-
-.custom-gradient {
-  @apply bg-gradient-to-tr from-cyan-500 to-fuchsia-500;
+ul li:hover {
+    @apply text-white;
 }
