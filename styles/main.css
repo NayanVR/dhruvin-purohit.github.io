@@ -2,19 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("/fonts/Oxygen");
+
 body {
-    cursor: none;
+  cursor: none;
 }
 
 a {
-    cursor: none;
+  cursor: none;
 }
 
 .cursor {
-  @apply absolute w-12 h-12 border-2 border-white rounded-full -translate-y-1/2 -translate-x-1/2;
+  /* The fixed makes it not show scrollbar which are shown when this is set to absolute. */
+  @apply fixed w-12 h-12 border-2 border-white rounded-full -translate-y-1/2 -translate-x-1/2;
   z-index: -1;
 }
 
-ul li:hover {
-    @apply text-white;
+.secret {
+  @apply text-black transition duration-1000;
+}
+
+.secret:hover {
+  @apply text-white;
+}
+
+.secret:hover + .cursor {
+  @apply scale-150
 }
